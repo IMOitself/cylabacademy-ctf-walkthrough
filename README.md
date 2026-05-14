@@ -403,3 +403,22 @@ async function spam() {
 }
 spam(); // this triggers the function to start
 ```
+
+### useful documenting stuff
+Start Recording in PowerShell:
+```
+powershell -NoProfile -NoExit -Command "function prompt { '> ' }; Start-Transcript -Path log.tmp | Out-Null" ; (Get-Content log.tmp) -notmatch '^\*|^Windows PowerShell transcript|^Start time:|^End time:|^Username:|^RunAs User:|^Configuration Name:|^Machine:|^Host Application:|^Process ID:|^PSVersion:|^OS:' | Set-Content log.txt ; Remove-Item log.tmp
+```
+Stop Recording:
+```
+exit
+```
+
+Start Recording in Bash:
+```
+script -q -c "env PS1='$ ' bash --norc" log.tmp && sed -E -e 's/\x1B\[[0-9;?]*[a-zA-Z]//g' -e '/^Script (started|done) on/d' log.tmp | col -bx > log.txt && rm log.tmp
+```
+Stop Recording:
+```
+exit
+```
