@@ -39,6 +39,9 @@ ___
 # GENERAL SKILLS
 - direct copy to clipboard
 ```
+pip install pyperclip
+```
+```
 import pyperclip
 
 my_variable = "idk"
