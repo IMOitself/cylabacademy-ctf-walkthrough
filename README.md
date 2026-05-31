@@ -16,7 +16,7 @@ ___
 <br><br>
 
 # useful guides :D
-
+- [**General Skills**](#general-skills)
 - [**Forensics**](#forensics)
   - [extracting texts from a file](#extracting-texts-from-a-file)
 - [**Cryptography**](#cryptography)
@@ -35,6 +35,15 @@ ___
     - [3. Looping](#3-looping)
 
 <br>
+
+# GENERAL SKILLS
+- direct copy to clipboard
+```
+import pyperclip
+
+my_variable = "idk"
+pyperclip.copy(my_variable)
+```
 
 # FORENSICS
 
